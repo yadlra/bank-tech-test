@@ -24,4 +24,12 @@ describe Statement do
       expect(statement.transactions).to include {withdraw_transaction}
     end
   end
+
+  describe '#format' do
+    it 'sets the format for the statement' do
+      statement.transaction_logging(deposit_transaction)
+      format_view = 'date || credit || debit || balance' +  "\n" '04/06/2019 || - || 1000 || 1000' + "\n"
+      expect{expect{statement.format}.to output(format_view).to_stdout}
+    end
+  end
 end

@@ -42,7 +42,9 @@ describe Account do
     it 'adds withdrawals to statement' do
       account.withdraw(200)
       expect(account.statement.transactions).to include { withdraw_transaction}
-
     end
   end
+
+
+  
 end
