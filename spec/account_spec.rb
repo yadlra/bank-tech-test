@@ -9,12 +9,12 @@ describe Account do
     expect(subject.balance).to eq(0)
   end
 
-  it 'has an intance of Statement' do
+  it 'has an instance of Statement' do
     expect(subject.statement).to be_an_instance_of(Statement)
   end
 
-  describe '#deposit' do
 
+  describe '#deposit' do
     it { is_expected.to respond_to(:deposit).with(1).argument }
     let(:date) { Date.parse('04/06/2019') }
 
@@ -29,8 +29,8 @@ describe Account do
     end
   end
 
-  describe '#withdraw' do
 
+  describe '#withdraw' do
     it { is_expected.to respond_to(:withdraw).with(1).argument }
     let(:date) { Date.parse('04/06/2019') }
 
