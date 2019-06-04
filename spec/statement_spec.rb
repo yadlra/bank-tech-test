@@ -2,8 +2,8 @@ require 'statement'
 
 describe Statement do
   let(:statement) { described_class.new }
-  let(:deposit_transaction) { { credit: 0, debit: 1000, balance: 1000 } }
-  let(:withdraw_transaction) { { credit: 1000, debit: 0, balance: 0 }}
+  let(:deposit_transaction) { { date: date, credit: "-", debit: 1000, balance: 1000 } }
+  let(:withdraw_transaction) { { date: date, credit: 1000, debit: "-", balance: 0 }}
   let(:date) { Date.parse('04/06/2019') }
 
 

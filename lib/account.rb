@@ -11,16 +11,17 @@ START_BALANCE = 0
 
   def deposit(amount, date = Date.today)
     @balance += amount
-    # @statement.transactions << { credit: 0, debit: amount, balance: @balance}
-    transaction_details = { credit: 0, debit: amount, balance: @balance }
+    transaction_details = { date: date.strftime("%d/%m/%Y"), credit: "-", debit: amount, balance: @balance }
     add_to_transactions(transaction_details)
   end
 
   def withdraw(amount, date = Date.today)
     @balance -= amount
+    transaction_details = { date: date.strftime("%d/%m/%Y"), credit: "-", debit: amount, balance: @balance }
+    add_to_transactions(transaction_details)
   end
 
-  private 
+  private
 
   def add_to_transactions(details)
     @statement.transaction_logging(details)
