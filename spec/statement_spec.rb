@@ -15,11 +15,13 @@ describe Statement do
 
   describe '#transaction_logging' do
     it 'logs deposit transaction to statement' do
+      allow(Date).to receive(:today).and_return(date)
       statement.transaction_logging(deposit_transaction)
       expect(statement.transactions).to include {deposit_transaction}
     end
 
     it 'logs withdraw transaction to statement' do
+      allow(Date).to receive(:today).and_return(date)
       statement.transaction_logging(withdraw_transaction)
       expect(statement.transactions).to include {withdraw_transaction}
     end
@@ -27,6 +29,7 @@ describe Statement do
 
   describe '#format' do
     it 'sets the format for the statement' do
+      allow(Date).to receive(:today).and_return(date)
       statement.transaction_logging(deposit_transaction)
       format_view = 'date || credit || debit || balance' +  "\n" '04/06/2019 || - || 1000 || 1000' + "\n"
       expect{expect{statement.format}.to output(format_view).to_stdout}

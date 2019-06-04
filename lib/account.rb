@@ -21,6 +21,10 @@ START_BALANCE = 0
     add_to_transactions(transaction_details)
   end
 
+  def view_statement
+    @statement.format
+  end
+
   private
 
   def add_to_transactions(details)
