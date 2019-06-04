@@ -14,7 +14,7 @@ Build a Bank Account simulator that can be run on the command line.
 
 1. Write user Stories
 2. Red, Green, Refactor first test
-3. Commit after passing every tests
+3. Commit after passing every test
 
 ## User Stories
 
