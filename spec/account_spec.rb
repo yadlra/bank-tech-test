@@ -1,9 +1,14 @@
 require 'account'
+require 'statement'
 
 describe Account do
 
   it 'has a balance of zero' do
     expect(subject.balance).to eq(0)
+  end
+
+  it 'has an intance of Statement' do
+    expect(subject.statement).to be_an_instance_of(Statement)
   end
 
   describe '#deposit' do
