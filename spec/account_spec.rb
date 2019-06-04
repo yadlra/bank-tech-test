@@ -11,7 +11,20 @@ describe Account do
     it { is_expected.to respond_to(:deposit).with(1).argument }
 
     it 'can deposit to the account' do
-      expect{ subject.deposit 1 }.to change{ subject.balance }.by 1
+      expect{ subject.deposit 1000 }.to change{ subject.balance }.by 1000
     end
   end
+
+  describe '#withdraw' do
+
+    it { is_expected.to respond_to(:withdraw).with(1).argument }
+    it 'deducts from balance when withdrawing' do
+
+      expect{ subject.withdraw 200 }.to change{ subject.balance }.by -200
+    end
+  end
+
+
+
+
 end
