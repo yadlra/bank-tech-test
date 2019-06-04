@@ -1,3 +1,5 @@
+ require 'date'
+
 class Account
 attr_reader :balance, :statement
 START_BALANCE = 0
@@ -7,11 +9,11 @@ START_BALANCE = 0
     @statement = statement
   end
 
-  def deposit(amount)
+  def deposit(amount, date = Date.today)
     @balance += amount
   end
 
-  def withdraw(amount)
+  def withdraw(amount, date = Date.today)
     @balance -= amount
   end
 

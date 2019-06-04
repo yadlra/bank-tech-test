@@ -1,5 +1,6 @@
 require 'account'
 require 'statement'
+require 'date'
 
 describe Account do
 
@@ -14,6 +15,7 @@ describe Account do
   describe '#deposit' do
 
     it { is_expected.to respond_to(:deposit).with(1).argument }
+    let(:date) { Date.parse('04/06/2019') }
 
     it 'can deposit to the account' do
       expect{ subject.deposit 1000 }.to change{ subject.balance }.by 1000
@@ -23,6 +25,7 @@ describe Account do
   describe '#withdraw' do
 
     it { is_expected.to respond_to(:withdraw).with(1).argument }
+    let(:date) { Date.parse('04/06/2019') }
 
     it 'deducts from balance when withdrawing' do
       expect{ subject.withdraw 200 }.to change{ subject.balance }.by -200
