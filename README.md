@@ -1,3 +1,9 @@
+# Bank Tech Test
+
+## Task
+
+Build a Bank Account simulator that can be run on the command line.
+
 ## User Stories
 
 ```
@@ -17,6 +23,29 @@ In order to see my transactions details
 As a User
 I want to print a bank statement with date, amount and balance.
 ```
+
+## Instructions
+
+Clone this repository:
+
+```
+$ git clone https://github.com/yadlra/bank-tech-test.git
+$ cd bank-tech-test
+```
+
+Install required gems:
+
+```
+$ bundle install
+```
+
+To view tests, run RSpec:
+
+```
+$ bundle exec rspec
+```
+
+## How to use in the command line
 
 ```
 irb(main):001:0> require './lib/account.rb'
