@@ -124,7 +124,6 @@
         0,
         null,
         null,
-        null,
         null
       ],
       "/Users/Yadira/bank-tech-test/spec/statement_spec.rb": [
@@ -168,6 +167,6 @@
         null
       ]
     },
-    "timestamp": 1559664050
+    "timestamp": 1559665768
   }
 }

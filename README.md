@@ -1,8 +1,20 @@
 # Bank Tech Test
 
+```
+COVERAGE:  95.40% -- 83/87 lines in 4 files
+
+
+```
+
 ## Task
 
 Build a Bank Account simulator that can be run on the command line.
+
+### Process
+
+1. Write user Stories
+2. Red, Green, Refactor first test
+3. Commit after passing every tests
 
 ## User Stories
 
@@ -45,7 +57,7 @@ To view tests, run RSpec:
 $ bundle exec rspec
 ```
 
-## How to use in the command line
+## How to use the app in IRB
 
 ```
 irb(main):001:0> require './lib/account.rb'
