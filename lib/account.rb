@@ -11,6 +11,7 @@ START_BALANCE = 0
 
   def deposit(amount, date = Date.today)
     @balance += amount
+    @statement.transactions << { credit: 0, debit: amount, balance: @balance}
   end
 
   def withdraw(amount, date = Date.today)
