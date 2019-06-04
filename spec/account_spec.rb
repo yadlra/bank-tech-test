@@ -18,13 +18,9 @@ describe Account do
   describe '#withdraw' do
 
     it { is_expected.to respond_to(:withdraw).with(1).argument }
-    it 'deducts from balance when withdrawing' do
 
+    it 'deducts from balance when withdrawing' do
       expect{ subject.withdraw 200 }.to change{ subject.balance }.by -200
     end
   end
-
-
-
-
 end
